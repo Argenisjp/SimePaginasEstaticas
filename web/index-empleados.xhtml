@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Tabla Empleados</title>
+    </h:head>
+    <h:body>
+        
+        
+        <h:form>
+            <p:commandButton value="Agregar Empleados" actionListener="#{empleadosControl.limpiarEmpleados()}" oncomplete="PF('dialogoAgregar').show();" update=":formAgregar"/>
+            <p:separator/>
+        </h:form>
+        
+         <h:form id="formListado">
+             <p:dataTable id="tablaEmpleados" paginator="true" paginatorPosition="bottom" rows="10" var="empleados" value="#{empleadosControl.listaEmpleados}" emptyMessage="No existen empleados">
+                            <p:column headerText="ID empleados">
+                                <h:outputText value="#{empleados.idEmpleado}" />
+                            </p:column>
+                            <p:column headerText="Cedula">
+                                <h:outputText value="#{empleados.ccEmpleado}" />
+                            </p:column>
+                            <p:column headerText="Nombre">
+                                <h:outputText value="#{empleados.nombreEmpleado}" />
+                            </p:column>
+                            <p:column headerText="Apellido">
+                                <h:outputText value="#{empleados.apellidoEmpleado}" />
+                            </p:column>
+                            <p:column headerText="Correo">
+                                <h:outputText value="#{empleados.emailEmpleado}" />
+                            </p:column>
+                            <p:column headerText="Contraseña">
+                                <h:outputText value="#{empleados.contrasenaEmpleado}" />
+                            </p:column>
+                            <p:column headerText="Telefono">
+                                <h:outputText value="#{empleados.telefonoEmpleado}" />
+                            </p:column>
+                            <p:column headerText="Direccion">
+                                <h:outputText value="#{empleados.direccionEmpleado}" />
+                            </p:column>
+                            
+                            <p:column headerText="MODIFICAR" style="text-align: center">
+                                <p:commandButton icon="ui-icon-pencil" title="Modificar" oncomplete="PF('dialogoModificar').show();" update=":formModificar">
+                                    <f:setPropertyActionListener target="#{empleadosControl.empleados}" value="#{empleados}"/>
+                                </p:commandButton>
+                            </p:column>
+                            <p:column headerText="ELIMINAR" style="text-align: center">
+                                <p:commandButton icon="ui-icon-trash" title="Eliminar" oncomplete="PF('dialogoEliminar').show();" update=":formEliminar">
+                                    <f:setPropertyActionListener target="#{empleadosControl.empleados}" value="#{empleados}"/>
+                                </p:commandButton>
+                            </p:column>
+                        </p:dataTable>
+                    </h:form>
+        
+        
+        <h:form id="formAgregar">
+                        <p:dialog id="dlgAgregar" header="Agregar Empleados" widgetVar="dialogoAgregar" resizable="false" showEffect="fade" hideEffect="explode" modal="true">
+                            <p:panelGrid columns="2" style="margin: 0 auto;">                                
+                                <p:outputLabel value="Cedula"/>
+                                <p:inputText value="#{empleadosControl.empleados.ccEmpleado}"/>
+                                <p:outputLabel value="Nombre"/>
+                                <p:inputText value="#{empleadosControl.empleados.nombreEmpleado}"/>
+                                <p:outputLabel value="Apellido"/>
+                                <p:inputText value="#{empleadosControl.empleados.apellidoEmpleado}"/>
+                                <p:outputLabel value="Correo"/>
+                                <p:inputText value="#{empleadosControl.empleados.emailEmpleado}"/>
+                                <p:outputLabel value="Contraseña"/>
+                                <p:inputText value="#{empleadosControl.empleados.contrasenaEmpleado}"/>
+                                <p:outputLabel value="Telefono"/>
+                                <p:inputText value="#{empleadosControl.empleados.telefonoEmpleado}"/>
+                                <p:outputLabel value="Direccion"/>
+                                <p:inputText value="#{empleadosControl.empleados.direccionEmpleado}"/>
+                            </p:panelGrid>
+                            <p:commandButton  value="Guardar" actionListener="#{empleadosControl.agregarEmpleados()}" update=":formListado:tablaEmpleados" oncomplete="PF('dialogoAgregar').hide();"/>
+                            <p:commandButton  value="Cancelar" onclick="PF('dialogoAgregar').hide();"/>
+                        </p:dialog>
+                    </h:form>
+
+                    <h:form id="formModificar">
+                        <p:dialog id="dlgModificar" header="Modificar Empleados" widgetVar="dialogoModificar" resizable="false" showEffect="fade" hideEffect="explode" modal="true">
+                            <p:panelGrid columns="2" style="margin: 0 auto;">                                
+                                <p:outputLabel value="Cedula"/>
+                                <p:inputText value="#{empleadosControl.empleados.ccEmpleado}"/>
+                                <p:outputLabel value="Nombre"/>
+                                <p:inputText value="#{empleadosControl.empleados.nombreEmpleado}"/>
+                                <p:outputLabel value="Apellido"/>
+                                <p:inputText value="#{empleadosControl.empleados.apellidoEmpleado}"/>
+                                <p:outputLabel value="Correo"/>
+                                <p:inputText value="#{empleadosControl.empleados.emailEmpleado}"/>
+                                <p:outputLabel value="Contraseña"/>
+                                <p:inputText value="#{empleadosControl.empleados.contrasenaEmpleado}"/>
+                                <p:outputLabel value="Telefono"/>
+                                <p:inputText value="#{empleadosControl.empleados.telefonoEmpleado}"/>
+                                <p:outputLabel value="Direccion"/>
+                                <p:inputText value="#{empleadosControl.empleados.direccionEmpleado}"/>
+                                
+                            </p:panelGrid>
+                            <p:commandButton  value="Guardar" actionListener="#{empleadosControl.modificarEmpleados()}" update=":formListado:tablaEmpleados" oncomplete="PF('dialogoModificar').hide();"/>
+                            <p:commandButton  value="Cancelar" onclick="PF('dialogoModificar').hide();"/>
+                        </p:dialog>
+                    </h:form>
+
+                    <h:form id="formEliminar">
+                        <p:dialog id="dlgEliminar" header="Eliminar Empleados" widgetVar="dialogoEliminar" resizable="false" showEffect="fade" hideEffect="explode" modal="true">
+                            <h:outputText value="Desea eliminar este registro?"/>
+                            <p:commandButton  value="Si" actionListener="#{empleadosControl.eliminarEmpleados()}" update=":formListado:tablaEmpleados" oncomplete="PF('dialogoEliminar').hide();"/>
+                            <p:commandButton  value="No" onclick="PF('dialogoEliminar').hide();"/>
+                        </p:dialog>
+                    </h:form>
+        
+    </h:body>
+</html>
+

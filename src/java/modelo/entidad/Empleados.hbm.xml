@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/10/2020 04:17:48 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.entidad.Empleados" table="empleados" catalog="iroko" optimistic-lock="version">
+        <id name="idEmpleado" type="java.lang.Integer">
+            <column name="ID_empleado" />
+            <generator class="identity" />
+        </id>
+        <property name="ccEmpleado" type="int">
+            <column name="CC_empleado" not-null="true" />
+        </property>
+        <property name="nombreEmpleado" type="string">
+            <column name="nombre_empleado" length="30" not-null="true" />
+        </property>
+        <property name="apellidoEmpleado" type="string">
+            <column name="apellido_empleado" length="30" not-null="true" />
+        </property>
+        <property name="emailEmpleado" type="string">
+            <column name="email_empleado" length="30" not-null="true" />
+        </property>
+        <property name="contrasenaEmpleado" type="string">
+            <column name="contrasena_empleado" length="30" not-null="true" />
+        </property>
+        <property name="telefonoEmpleado" type="string">
+            <column name="telefono_empleado" length="10" not-null="true" />
+        </property>
+        <property name="direccionEmpleado" type="string">
+            <column name="direccion_empleado" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

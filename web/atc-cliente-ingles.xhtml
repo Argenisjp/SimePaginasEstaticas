@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <meta charset="utf-8" />
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+        <meta name="author" content="Argenis Jose Rangel" />
+
+        <title>PROYECTO SIME</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="resources/img/sime.png" />
+        <!-- Bootstrap Css -->
+        <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
+        <!-- Hoja de estilos -->
+        <link href="resources/css/ventas.css" rel="stylesheet" />
+        <!-- Datatable css -->
+        <link rel="stylesheet" href="resources/DataTables/DataTables-1.10.20/css/dataTables.bootstrap4.min.css" />
+        <!-- Datatable Responsive -->
+        <link rel="stylesheet" href="resources/DataTables/Responsive-2.2.3/css/responsive.bootstrap4.min.css" />
+        <link rel="stylesheet" href="resources/DataTables/Responsive-2.2.3/css/responsive.dataTables.min.css" />
+        <!-- Hoja de estilos de sweeAlert2 -->
+        <link rel="stylesheet" href="resources/sweetalert2/package/dist/sweetalert2.min.css" />
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,700&amp;display=swap" rel="stylesheet" />
+        <!-- Ionic icons -->
+    </head>
+
+    <body>
+
+        <div class="d-flex" id="content-wrapper">
+            <!-- Sidebar -->
+
+            <div class="panel-control" id="panel-c">
+
+                <div class="opacidad-panel">
+
+                    <div class="admin-user">
+                        <img src="resources/img/Avatar.png" width="100" alt="" /><br />
+                        <!-- <small>Administrador</small> -->
+                        <small>Argenis Jose</small>
+                    </div>
+
+                    <div class="menu-panel">
+                        <nav>
+
+                            <ul>
+
+                                <li><a href="ventas-ingles.html"><i class="fas fa-cart-arrow-down mr-2  lead" />Sales</a></li>
+
+                                <li><a href="produccion-ingles.html"><i class="fab fa-steam-square mr-2  lead" />Production</a></li>
+
+                                <li><a href="rec-humanos.html"><i class="fas fa-people-carry mr-2 lead" />Human Resources</a></li>
+
+                                <li><a href="atc-cliente-ingles.html"><i class="fas fa-headset mr-2  lead" />Customer Support</a></li>
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-book-reader mr-2  lead" /> Documentation
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Documentation</a>
+                                        <a class="dropdown-item" href="https://drive.google.com/file/d/170FcLTLAAE7ALwUrtzp9V3B46gkESkT4/view?usp=sharing">IEEE-830</a>
+                                        <a class="dropdown-item" href="https://drive.google.com/drive/folders/19hSHLiU3SdnutNQb9qLrzfjEh5mwzdwA?usp=sharing">Fase-1</a>
+                                        <a class="dropdown-item" href="https://drive.google.com/drive/folders/1sGRM-DUPSp8G4Qu6hv2VAGFesQ2yqu7I?usp=sharing">Fase-2</a>
+                                        <a class="dropdown-item" href="https://drive.google.com/drive/folders/13RCHqABpvSbQCo7w9MabBfiQcun1uKur?usp=sharing">Fase-3</a>
+
+                                        <div class="dropdown-divider" />
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="footer-panel">
+                        <small>IROKO JEANS</small>
+                    </div>
+                </div></div><!-- Fin sidebar -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper" class="w-100 bg-light-blue">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+                    <div class="container-fluid" style="margin: 0px 10px;">
+                        <button id="menu-toggle" class="btn btn-outline-dark my-2 my-sm-0 " type="submit"><i class="fas fa-exchange-alt" /></button>
+
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user-cog" />
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#"><i class="fas fa-user-edit mr-2" />My profile</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-cog mr-1" />Setting</a>
+                                        <a class="dropdown-item" href="atc-cliente.html"><i class="fas fa-language mr-1 lead" />Translate to Spanish</a>
+
+                                        <div class="dropdown-divider" />
+                                        <a class="dropdown-item" href="pag-principal.html"><i class="fas fa-share-square mr-1" />Sign off</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div></nav>
+
+                <div id="content" class="container-fluid p-4">
+                    <section class="">
+                        <!-- MIGAS DE PAN -->
+
+                        <div class="migas-pan  ">
+
+                            <div class="row">
+
+                                <div class="col-sm">
+                                    <nav aria-label="breadcrumb">
+
+                                        <ol class="breadcrumb">
+
+                                            <li class="breadcrumb-item"><a href="pag-principal.html">Start</a></li>
+
+                                            <li class="breadcrumb-item"><a href="traducir.html">Admin</a></li>
+
+                                            <li class="breadcrumb-item active" aria-current="page">Customer service</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>      
+                        </div>
+
+                        <div class="card mb-2">
+
+                            <h5 class="card-header"><i class="fas fa-headset mr-2  lead" style="font-size: 40px;" />CUSTOMER SUPPORT</h5>
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">Suggestions complaints and claims</h5>
+
+                                <p class="card-text">IROKO JENAS</p>  
+                            </div>
+                        </div>
+
+                        <div class="table-responsive-sm">
+
+                            <table id="tabla" class="table table-striped table-hover table-bordered" width="100%">
+                                <thead class="thead-dark text-center">
+
+                                    <tr>
+
+                                        <th scope="col">ID</th>
+
+                                        <th scope="col">User</th>
+
+                                        <th scope="col">Mail</th>
+
+                                        <th scope="col">Message</th>
+
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="text-center">
+
+                                    <tr>
+
+                                        <th scope="row">1</th>
+
+                                        <td>Argenis Jose</td>
+
+                                        <td>argenis00@gmail.com</td>
+
+                                        <td>Buenos dias quiciera mas información sobre su mercancia</td>
+
+                                        <td> 
+
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-danger" onclick="eliminar_atc_ingles();"><i class="fas fa-trash-alt lead" /></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+
+                                        <th scope="row">2</th>       
+
+                                        <td>Andrea Carolina</td>
+
+                                        <td>carollandre@gmail.com</td>
+
+                                        <td>Buenos dias quiciera mas información sobre su mercancia</td>
+
+                                        <td> 
+
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-danger" onclick="eliminar_atc_ingles();"><i class="fas fa-trash-alt lead" /></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+
+                                        <th scope="row">3</th>
+
+                                        <td>Carlos Perez</td>
+
+                                        <td>quinteross@gmail.com</td>
+
+                                        <td>Buenos dias quiciera mas información sobre su mercancia</td>
+
+                                        <td> 
+
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-danger" onclick="eliminar_atc_ingles();"><i class="fas fa-trash-alt lead" /></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+
+                                        <th scope="row">4</th>
+
+                                        <td>Adriana Sofia</td>
+
+                                        <td>adrisofia@gmail.com</td>
+
+                                        <td>Buenos dias quiciera mas información sobre su mercancia</td>
+
+                                        <td> 
+
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-danger" onclick="eliminar_atc_ingles();"><i class="fas fa-trash-alt lead" /></button>
+                                            </div>
+                                        </td>
+                                    </tr> 
+
+                                    <tr>
+
+                                        <th scope="row">5</th>
+
+                                        <td>Angie Carolina</td>
+
+                                        <td>caroangi@gmail.com</td>
+
+                                        <td>Buenos dias quiciera mas información sobre su mercancia</td>
+
+                                        <td> 
+
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-danger" onclick="eliminar_atc_ingles();"><i class="fas fa-trash-alt lead" /></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <!--FIN DE LA TABLA DE LA LISTA DE USUARIOS --></div>
+                        <br /><br /><br /></section></div>
+            </div></div><!-- Fin Page Content -->
+        <!-- Fin wrapper -->
+        <!-- Bootstrap y JQuery -->
+        <script src="resources/bootstrap/js/jquery-3.4.1.min.js"></script>
+        <script src="resources/bootstrap/js/popper.min.js"></script>
+        <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="resources/iconos/js/all.min.js"></script>
+        <!-- datatables JS -->
+        <script type="text/javascript" src="resources/DataTables/datatables.min.js"></script>  
+
+        <script type="text/javascript" src="resources/DataTables/Responsive-2.2.3/js/responsive.bootstrap4.min.js"></script>  
+
+        <script type="text/javascript" src="resources/DataTables/Responsive-2.2.3/js/dataTables.responsive.min.js"></script>  
+        <!-- para usar botones en datatables JS -->  
+
+        <script src="resources/DataTables/Buttons-1.6.1/js/dataTables.buttons.min.js"></script>  
+
+        <script src="resources/DataTables/JSZip-2.5.0/jszip.min.js"></script>    
+
+        <script src="resources/DataTables/pdfmake-0.1.36/pdfmake.min.js"></script>    
+
+        <script src="resources/dataTables/pdfmake-0.1.36/vfs_fonts.js"></script>
+        <script src="resources/dataTables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+        <!-- código JS propìo-->    
+
+        <script type="text/javascript" src="resources/js/table.js"></script> 
+        <!-- alerta sweetalert2 -->
+        <script type="text/javascript" src="resources/sweetalert2/package/dist/sweetalert2.all.min.js"></script>
+        <script type="text/javascript" src="resources/js/sweetAler.js"></script>
+        <!-- Abrir / cerrar menu -->
+        <script>
+                        $("#menu-toggle").click(function (e) {
+                            e.preventDefault();
+                            $("#content-wrapper").toggleClass("toggled");
+                        });
+        </script>
+    </body>
+</html>
